@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 st.write(''' # Predicción de calificación de examen ''')
-st.image("calificaciones.jfif", caption="Predicción de la calificación de un alumno.")
+st.image("examenf.png", caption="Predicción de la calificación de un alumno.")
 
 st.header('Datos del alumno')
 
@@ -27,7 +27,7 @@ def user_input_features():
 df = user_input_features()
 prediccion = 0
 
-datos = pd.read_csv('student_exam_scores(3).csv')
+datos = pd.read_csv('student_exam_scores.csv')
 
 X = datos.drop(columns=['student_id','exam_score'])
 y = datos['exam_score']
